@@ -29,5 +29,6 @@ urlpatterns = [
 
     # 用户管理
     path("info/list/", views.info_list),
-    path("info/add/", views.info_add)
+    path("info/add/", views.info_add),
+    path("info/delete/", views.info_delete)
 ]

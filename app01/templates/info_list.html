@@ -12,15 +12,17 @@
         <th>姓名</th>
         <th>密码</th>
         <th>年龄</th>
+        <th>操作</th>
     </tr>
     </thead>
     <tbody>
     {% for item in data_list %}
         <tr>
-            <th>{{ item.id }}</th>
-            <th>{{ item.username }}</th>
-            <th>{{ item.password }}</th>
-            <th>{{ item.age }}</th>
+            <td>{{ item.id }}</td>
+            <td>{{ item.username }}</td>
+            <td>{{ item.password }}</td>
+            <td>{{ item.age }}</td>
+            <td><a href="/?nid={{ item.id }}">删除</a></td>
         </tr>
     {% endfor %}
 

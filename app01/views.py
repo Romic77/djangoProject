@@ -77,4 +77,20 @@ def info_add(request):
 
     # 创建用户信息
     models.UserInfo.objects.create(username=username, password=password, age=age)
-    return render(request, "info_list.html")
+    return redirect("/info/list")
+
+
+def info_delete(request):
+    id = request.GET.get("nid")
+
+    models.UserInfo.objects.filter(id=id).delete()
+    return redirect("/info/list")
+
+
+def info_update(request):
+    username = request.POST.get("username")
+    password = request.POST.get("password")
+    age = request.POST.get("age")
+
+    models.UserInfo.objects.filter(id=id).update(username=username, password=password, age=age)
+    return redirect("/info/list")
