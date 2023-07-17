@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{ name }}:{{ roles.1 }}
+<br/>
+{% for item in roles %}
+    我是：<span>{{ item }}</span><br/>
+{% endfor %}
+
+我的名称:{{ my_dict.name }}
+我的薪资：{{ my_dict.slary }}
+
+
+{% for k,v in my_dict.items %}
+    <p>{{ k }}:{{ v }}</p>
+{% endfor %}
+
+
+{% for item in data_list %}
+    <p>{{ item }}</p>
+{% endfor %}
+
+
+<hr/>
+
+{% if name == "张三" %}
+    zhangsan
+{% endif %}
+
+<hr/>
+
+{{ jsonStr }}
+
+</body>
+</html>
